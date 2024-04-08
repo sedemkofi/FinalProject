@@ -1,8 +1,8 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 require '../settings/connection.php';
+
+global $conn;
 
 if (isset($_POST['Submit'])) {
     $firstname = trim($_POST['first-name']);
