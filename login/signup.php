@@ -15,11 +15,7 @@
 <body>
     
     <div class="loader_bg">
-        <div class="loader">
-            <video autoplay loop muted playsinline>
-                <source src="../images/loading.mp4" type="video/mp4">
-            </video>
-        </div>
+        <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
     
     <video autoplay muted loop id="myVideo">
@@ -99,7 +95,7 @@
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader_bg').style.display = 'none';
-            }, 8000);  
+            }, 800);  
         });
     </script>
 </body>
