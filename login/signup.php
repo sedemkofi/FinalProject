@@ -95,7 +95,7 @@
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader_bg').style.display = 'none';
-            }, 800);  
+            }, 1500);  
         });
     </script>
 </body>
