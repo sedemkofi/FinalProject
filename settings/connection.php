@@ -1,7 +1,7 @@
 <?php
     $SERVER="localhost";
     $USERNAME = "root"; 
-    $PASSWORD= "";
+    $PASSWORD= "E!x8Uc16t!mf";
     $DB_NAME ="musiccollab";
     
     $conn = mysqli_connect($SERVER, $USERNAME, $PASSWORD, $DB_NAME);
