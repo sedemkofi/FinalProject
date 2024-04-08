@@ -1,5 +1,5 @@
 .header-picture {
-    height: 300px;
+    height: 350px;
     width: 100%;
 }
 .profile-pic {
@@ -127,7 +127,7 @@
 }
 
 #audio-container {
-    width: 100%;
+    width: 40%;
     height: 180px;
     display: flex;
     flex-direction: column;
