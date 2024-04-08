@@ -1,0 +1,41 @@
+.home-back {
+    background: url('../images/wavers2.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 70vh;
+}
+.features-section {
+    background-color: #fff;
+    padding: 20px;
+}
+.head {
+    font-weight: bold;
+}
+.get-started-div {
+    margin-top: 50px;    
+    display: flex;
+    justify-content: center;        
+}
+#footer-index * {
+    color: #333;
+}
+.nav-link{
+    font-size: 15px;
+}
+.profile-header {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    top: -75px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid white;
+}

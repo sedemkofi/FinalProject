@@ -1,0 +1,161 @@
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+#videoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.btn-sm{
+    margin-top: 30px;
+}
+footer {
+    flex-shrink: 0;
+}
+
+/* Add some content to show on top of the video */
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.box {
+    
+    background-color: rgba(0, 0, 0, 0.2); backdrop-filter: blur(5px);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+.container {
+    margin-top: 50px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group label {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-right: 10px; 
+}
+.form-group label.email-label {
+    margin-left: 55px;
+}
+
+.form-group input[type="email"] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px; 
+    width: 50%;
+    font-size: 0.8rem; 
+}
+.form-group label.fname-label {
+    margin-left: 30px;
+}
+.form-group label.lname-label {
+    margin-left: 30px;
+}
+.form-group input[type="text"] {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px; 
+    width: 50%;
+    font-size: 0.8rem; 
+    margin-right: 8px;
+}
+input::placeholder {
+    color: #ccc;
+}
+
+.form-group #password {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px; /* Adjust as needed */
+    width: 50%;
+    margin-right: -18px;
+    font-size: 0.8rem; /* Adjust as needed */
+}
+.form-group #confirm-password{
+    margin-right: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px; /* Adjust as needed */
+    width: 50%;
+    font-size: 0.8rem; /* Adjust as needed */
+}
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-group button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #0062cc;
+}
+#error-message {
+    color:crimson;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.line{
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    
+    margin: auto;
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+.sign-in-head {
+    font-size: 30px;
+    color: white;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+.nav-link{
+    font-size: 15px;
+}
