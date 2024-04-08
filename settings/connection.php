@@ -1,5 +1,5 @@
 <?php
-    $SERVER="localhost";
+    $SERVER="172.166.208.199";
     $USERNAME = "root"; 
     $PASSWORD= "E!x8Uc16t!mf";
     $DB_NAME ="musiccollab";
