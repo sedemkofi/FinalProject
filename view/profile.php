@@ -37,7 +37,7 @@
     </nav>
     <!-- TODO : Add profile picture  by random selection when a user logs in. use current user to fetch  from database -->
     <div class="profile-header">
-        <img src="../images/wp5310238.webp" class="header-picture" alt="">
+        <img src="../images/default-header.png" class="header-picture" alt="">
     </div>
     <div class="text-center">
         <img src="../avatars/1.png" class="profile-pic" alt="Profile Picture">
