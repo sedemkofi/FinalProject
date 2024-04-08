@@ -1,5 +1,5 @@
 <?php
-    $SERVER="172.166.208.199";
+    $SERVER="127.0.0.1";
     $USERNAME = "root"; 
     $PASSWORD= "E!x8Uc16t!mf";
     $DB_NAME ="musiccollab";
