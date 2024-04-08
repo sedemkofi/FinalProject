@@ -15,7 +15,9 @@
 <body>
     
     <div class="loader_bg">
-        <div class="loader"><img src="../images/Loading.mp4" alt="#" /><br><p>Loading</p></div>
+        <div class="loader"><img src="../images/loading.mp4"/>
+        <!-- <br><p>Loading</p> -->
+        </div>
     </div>
     
     <video autoplay muted loop id="myVideo">
