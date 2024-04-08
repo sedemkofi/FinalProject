@@ -15,7 +15,7 @@
 <body>
     
     <div class="loader_bg">
-        <div class="loader"><source src="../images/loading.mp4" type="video/mp4"/>
+        <div class="loader"><video> <source src="../images/loading.mp4" type="video/mp4"></video>
         <!-- <br><p>Loading</p> -->
         </div>
     </div>
