@@ -15,8 +15,10 @@
 <body>
     
     <div class="loader_bg">
-        <div class="loader"><video> <source src="../images/loading.mp4" type="video/mp4"></video>
-        <!-- <br><p>Loading</p> -->
+        <div class="loader">
+            <video autoplay loop muted playsinline>
+                <source src="../images/loading.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
     
