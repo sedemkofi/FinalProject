@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/loading.css">
 </head>
 <body>
     <div class="loader_bg">
             <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="../index.php">Wavers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,6 +53,13 @@
     <div id="footer"></div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader_bg').style.display = 'none';
+            }, 1500);  
+        });
+
         $(function(){
             $("#footer").load("../view/footer.php"); 
         });

@@ -13,13 +13,14 @@
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/loading.css">
 
 </head>
 <body>
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php">Wavers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,6 +62,13 @@
         $(function(){
             $("#footer-index").load("homepage-footer.php"); 
         });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader_bg').style.display = 'none';
+            }, 1500);  
+        });
     </script>
+
+    
 </body>
 </html>
