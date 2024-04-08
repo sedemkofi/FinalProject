@@ -1,3 +1,7 @@
+<?php
+include '../feedback/signup_error.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

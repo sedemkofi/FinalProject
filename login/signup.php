@@ -100,6 +100,6 @@
     </script>
 </body>
 <?php
-   include '../errors.php/signup_error.php';
+   include '../feedback/signup_error.php';
 ?>  
 </html>

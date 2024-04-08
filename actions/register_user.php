@@ -27,7 +27,7 @@ if (isset($_POST['Submit'])) {
 
     if ($result->num_rows > 0) {
         // User already exists, redirect back to signup page
-        header('Location: ../login/signup.php?error=email_in_use');
+        header('Location: ../login/login.php?error=email_in_use');
         echo '<script>alert("This email is already in use. Please use a different email address.")</script>';
         exit();
     }
