@@ -13,7 +13,7 @@ if(isset($_POST['Submit'])){
     
     if($data = mysqli_fetch_assoc($result)){
         if(password_verify($password, $data['Password'])) {
-            $_SESSION['user'] = $data; // Store user data in session
+            $_SESSION['user'] = $data; 
             
             echo "Login successful";
             header("Location: ../view/homepage.php");

@@ -21,6 +21,7 @@ CREATE TABLE User (
     Password VARCHAR(100),
     Bio VARCHAR(300),
     RoleID INT,
+    HeaderPath VARCHAR(200),
     FOREIGN KEY (RoleID) REFERENCES UserRole(RoleID)
 );
 

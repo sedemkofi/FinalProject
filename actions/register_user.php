@@ -32,7 +32,7 @@ if (isset($_POST['Submit'])) {
         exit();
     }
 
-    $query = "INSERT INTO `User` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`) VALUES ('$firstname', '$lastname', '$email', '$hashed_password', '3')";
+    $query = "INSERT INTO `User` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`, `HeaderPath`) VALUES ('$firstname', '$lastname', '$email', '$hashed_password', '3','../images/default-header.png')";
     $stmt = mysqli_prepare($conn, $query);
 
     if(!$stmt){
