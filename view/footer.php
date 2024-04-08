@@ -73,7 +73,7 @@
             <p><i class="fas fa-home me-3"></i> Ashesi University, Ghana</p>
             <p>
             <i class="fas fa-envelope me-3"></i>
-            contactsedemkofi@gmail.com
+            sedemkofi@gmail.com
             </p>
             <p><i class="fas fa-phone me-3"></i> +233 20 694 5604</p>
             <p><i class="fas fa-print me-3"></i> +233 20 083 8143</p>
