@@ -1,12 +1,3 @@
-.loader_bg {
-    position: fixed;
-    z-index: 999999;  
-    background: rgba(255, 255, 255, 1); 
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
 
 .loader {
     position: absolute;
@@ -24,10 +15,8 @@
     width: 100px;  /* Adjust as needed */
     height: 100px;  /* Adjust as needed */
 }
-.loader p{
-    color: rgba(169, 169, 169, 0.8);  /* Ash color, semi-transparent */
 
-}.loader_bg {
+.loader_bg {
     position: fixed;
     z-index: 999999;  /* High z-index to ensure loader is on top of other elements */
     background: rgba(0, 0, 0, 1);  /* Black background */
@@ -37,23 +26,3 @@
     left: 0;
 }
 
-.loader {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  /* Center the loader */
-}
-
-.loader video {
-    width: 30%;      
-    height: 30%;
-}
-
-.loader p{
-    color: rgba(169, 169, 169, 0.8);  /* Ash color, semi-transparent */
-}
