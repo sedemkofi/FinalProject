@@ -58,15 +58,18 @@ include '../functions/showUploads.php'
 
 
     </div>
-    <?php 
-        displayUploads($musicFiles);
-    ?>
+    
     
     
     <div class="container">
         <p>Uploads</p>
         <!-- TODO : Display user's tracks here -->
-        <audio type="audio" id="audio-player">
+
+        <?php 
+            displayUploads($musicFiles);
+        ?>
+        <!-- TODO style later -->
+        <!-- <audio type="audio" id="audio-player">
             <source src="../audio/WorkIt.wav" type="audio/wav">
             Your browser does not support the audio element.
             
@@ -86,7 +89,7 @@ include '../functions/showUploads.php'
             <input id="volumeControl" type="range" min="0" max="1" step="0.01" value="0.8">
             <p id="current-time">0:00</p>
             <p id="duration">0:00</p>
-        </div>
+        </div> -->
         
     </div>
     <br><br>
