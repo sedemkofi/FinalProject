@@ -126,7 +126,6 @@
                 <input type="file" id="imageFile" name="image" onchange="updateImageButtonLabel()" accept="image/*">
 
             </div>
-            
             <div class="form-group">
                 <label for="audioFile">Audio</label><br>
                 <p class="upload-message">Upload an audio file (.mp3 or .wav)</p>
