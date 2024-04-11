@@ -16,7 +16,7 @@ if(isset($_POST['Submit'])){
             $_SESSION['user'] = $data; 
             
             echo "Login successful";
-            header("Location: ../view/homepage.php");
+            header("Location: ../view/homepage.php?message=login_successful-" . $_SESSION['user']['UserID']);
             exit();
         } else {
             header("Location: ../login/login.php?error=wrong_password");

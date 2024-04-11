@@ -8,8 +8,10 @@ if (isset($_POST['Submit'])) {
     $firstname = trim($_POST['first-name']);
     $lastname = trim($_POST['last-name']);
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $artistname = trim($_POST['artistname']);
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm-password'];
+
 
     if ($password !== $confirmPassword) {
         header('Location: ../view/signup.php?error=password_mismatch');
@@ -32,8 +34,9 @@ if (isset($_POST['Submit'])) {
         exit();
     }
 
-    $query = "INSERT INTO `User` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`, `HeaderPath`) VALUES ('$firstname', '$lastname', '$email', '$hashed_password', '3','../images/default-header.png')";
-    $stmt = mysqli_prepare($conn, $query);
+    $query = "INSERT INTO `User` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`, `HeaderPath`, `ArtistName`) VALUES (?, ?, ?, ?, '3', '../images/default-header.png', ?)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("sssss", $firstname, $lastname, $email, $hashed_password, $artistname);
 
     if(!$stmt){
         die("Query preparation failed: " . mysqli_error($conn));
@@ -42,7 +45,7 @@ if (isset($_POST['Submit'])) {
     $success = mysqli_stmt_execute($stmt);
     if ($success) {
         // User successfully registered, redirect to login page
-        header('Location: ../view/signin.php?registration=success');
+        header('Location: ../login/login.php?registration=success');
         exit();
     } else {
         // Error occurred during registration, redirect back to signup page

@@ -1,3 +1,9 @@
+<?php
+include '../settings/core.php';
+include '../functions/user_functions.php';
+include '../functions/showUploads.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,13 +47,24 @@
     </div>
     <div class="text-center">
         <img src="../avatars/1.png" class="profile-pic" alt="Profile Picture">
-        <h1 class="display-4">Your Profile</h1>
-        <p class="lead">Followers: <!-- Display follower count here --> | Following: <!-- Display following count here --></p>
-        <a class="btn btn-primary btn-sm" id="edit-button" onclick="showEditBox()">Edit Account</a>
+        <p>@<?php echo $_SESSION['user']['ArtistName']?></p>
+        <h1 class="display-4">
+            <?php echo $_SESSION['user']['FirstName'] . " " .   $_SESSION['user']['LastName']; ?>
+        </h1>
+        <p class="lead">Uploads: <?php echo uploadCount() ?> | Collaborations: <?php echo addCollabs()?></p>
+        <p> <?php displayBio() ?></p>
+        <a class="btn btn-primary btn-sm" id="edit-button" href="edit-account.php">Edit Account</a>
+        <a class="btn btn-primary btn-sm" href="upload-song.php" id="upload-button">Upload Music</a>
+
+
     </div>
+    <?php 
+        displayUploads($musicFiles);
+    ?>
+    
     
     <div class="container">
-        <p>Your Music</p>
+        <p>Uploads</p>
         <!-- TODO : Display user's tracks here -->
         <audio type="audio" id="audio-player">
             <source src="../audio/WorkIt.wav" type="audio/wav">

@@ -81,7 +81,8 @@ footer {
 .form-group label.lname-label {
     margin-left: 30px;
 }
-.form-group input[type="text"] {
+
+.form-group input[name="text"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px; 
@@ -96,19 +97,22 @@ input::placeholder {
 .form-group #password {
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 5px; /* Adjust as needed */
+    padding: 5px; 
     width: 50%;
     margin-right: -18px;
-    font-size: 0.8rem; /* Adjust as needed */
+    font-size: 0.8rem;
 }
 .form-group #confirm-password{
     margin-right: 40px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 5px; /* Adjust as needed */
+    padding: 5px; 
     width: 50%;
-    font-size: 0.8rem; /* Adjust as needed */
+    font-size: 0.8rem; 
 }
+
+
+
 .form-group input[type="email"]:focus,
 .form-group input[type="password"]:focus {
     outline: none;

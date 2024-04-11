@@ -15,33 +15,12 @@
 
 #edit-button{
     color: white;
+    margin-right: 10px;
 }
 
-.editBox {
-    /* display: none; */
-    margin-top: 20px;
-}
-
-.editBox form {
-    font-size: 12px;
-    width: 300px;
-    margin: 0 auto;
-}
-
-.editBox label {
-    font-weight: bold;
-}
-
-.editBox input {
-    margin-bottom: 10px;
-}
-
-.editBox button {
-    margin-top: 10px;
-}
 #audioControls {
     display: flex;
-    justify-content: center;
+    margin-left: 15px;
     align-items: center;
     gap: 10px;
 }
@@ -74,27 +53,16 @@
     cursor: pointer;
 }
 
-
-#progress-bar {
-    width: 90%;
-    height: 10px;
-    background-color: #f3f3f3;
-    border-radius: 5px;
-    overflow: hidden;
-    appearance: none;
-    margin: auto;
-}
-
 #progress-bar::-webkit-slider-runnable-track {
     background-color: #f3f3f3;
     border-radius: 5px;
 }
 
 #progress-bar::-webkit-slider-thumb {
-    /* -webkit-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
-    width: 5px; */
-    height: 50px;
+    width: 10px; 
+    height: 10px;
     background-color: gray;
     border-radius: 50%;
     cursor: pointer;
@@ -120,14 +88,14 @@
 
 #progress-bar::-ms-thumb {
     width: 20px;
-    height: 20px;
-    background-color: #ffffff;
+    height: 10px;
+    background-color: gray;
     border-radius: 50%;
     cursor: pointer;
 }
 
 #audio-container {
-    width: 90%;
+    width: 30%;
     height: 180px;
     display: flex;
     flex-direction: column;

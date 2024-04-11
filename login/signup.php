@@ -56,6 +56,10 @@
                     <input type="text" id="last-name" name="last-name" placeholder="Enter your last name..." >
                 </div>
                 <div class="form-group">
+                    <label for="artist-name" class="artist-name" style="margin-left: 5px">Artist Name</label>
+                    <input type="text" id="artist-name" name="artistname" placeholder="Enter your artist name..." >
+                </div>
+                <div class="form-group">
                     <label for="email" class="email-label">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email address..." >
                 </div>
