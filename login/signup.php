@@ -1,17 +1,14 @@
 <?php 
     include '../feedback/signup_error.php';
     include '../settings/core.php';
-    checkLogin();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wavers - SignUp</title>
-        
         <link rel="icon" href="../images/waveform.svg">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,6 +16,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <link rel="stylesheet" href="../css/loading.css">
         <link rel="stylesheet" href="../css/signup.css">
+        
     </head>
 <body>
     
@@ -41,7 +39,7 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav><br><br><br>
     <div class="container d-flex justify-content-center align-items-center" style="height: 90vh; ">
         <div class="box p-5">
             <h1 class="text-center mb-4 sign-in-head">Sign up for Wavers</h1>

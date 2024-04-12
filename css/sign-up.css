@@ -1,0 +1,55 @@
+body {
+    background: #ff7e5f;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.form-group input {
+    border: 1px solid #ccc;
+    padding: 5px; 
+    width: 200px;
+    font-size: 0.8rem; 
+}
+
+.form-group button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#error-message {
+    color: crimson;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.sign-in-head {
+    font-size: 30px;
+    color: white;
+}
