@@ -2,13 +2,7 @@
 include '../settings/core.php';
 include '../functions/user_functions.php';
 include '../functions/showUploads.php';
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,14 +16,11 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../css/loading.css">
-
-    
 </head>
 <body>
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php">Wavers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,152 +51,20 @@ error_reporting(E_ALL);
         <p> <?php displayBio() ?></p>
         <a class="btn btn-primary btn-sm" id="edit-button" href="edit-account.php">Edit Account</a>
         <a class="btn btn-primary btn-sm" href="upload-song.php" id="upload-button">Upload Music</a>
-
-
-    </div>
-    
-    
-    
+    </div> 
     <div class="container">
         <p>Uploads</p>
-        <!-- TODO : Display user's tracks here -->
-
-        <?php 
-            displayUploads($musicFiles);
-        ?>
-        <!-- TODO style later -->
-        <!-- <audio type="audio" id="audio-player">
-            <source src="../audio/WorkIt.wav" type="audio/wav">
-            Your browser does not support the audio element.
-            
-        </audio>
-        <div id="audio-container">
-            <div id="details-container">
-                <p id="song-uploader"> saintkofi<?php //$_SESSION['user']['username']?></p>
-                <p id="song-title">Work It</p>
-                <p id="artistes"> saintkofi, sprayze</p>
-            </div>
-            
-            <input id="progress-bar" type="range" min="0" max="100" step="0.01" value="0">
-        </div>
-        <div id="audioControls">
-            <button id="playButton"><i class="fas fa-play"></i></button>
-            <button id="pauseButton"><i class="fas fa-pause"></i></button>
-            <input id="volumeControl" type="range" min="0" max="1" step="0.01" value="0.8">
-            <p id="current-time">0:00</p>
-            <p id="duration">0:00</p>
-        </div> -->
-        
+        <!-- TODO : put them in a grid -->
+        <?php displayUploads($musicFiles);?>
     </div>
     <br><br>
     <div class="container-fluid text-center">
         <span class="text-muted">Wavers &copy; 2020</span>
     </div>
-    
     <!-- Footer -->
     <div id="footer-index"></div>
     <!-- Footer -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script>
-    
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.querySelector('.loader_bg').style.display = 'none';
-            }, 1500);  
-        });
-
-    var audioPlayer = document.getElementById('audio-player');
-    var playButton = document.getElementById('playButton');
-    var pauseButton = document.getElementById('pauseButton');
-    var volumeControl = document.getElementById('volumeControl');
-    var progressBar = document.getElementById('progressBar');
-
-
-    playButton.addEventListener('click', function() {
-        audioPlayer.play();
-        playButton.style.display = 'none';
-        pauseButton.style.display = 'block';
-    });
-
-    pauseButton.addEventListener('click', function() {
-        audioPlayer.pause();
-        playButton.style.display = 'block';
-        pauseButton.style.display = 'none';
-    });
-
-    volumeControl.addEventListener('change', function() {
-        audioPlayer.volume = volumeControl.value;
-    });
-
-
-    window.onload = function() {
-
-        var audioPlayer = document.getElementById('audio-player');
-        var progressBar = document.getElementById('progress-bar');
-        
-
-        audioPlayer.addEventListener('timeupdate', function() {
-            var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-            progressBar.value = progress;
-        });
-
-        progressBar.addEventListener('input', function() {
-            audioPlayer.currentTime = (progressBar.value / 100) * audioPlayer.duration;
-        });
-        // Updating the duration
-        var duration = document.getElementById('duration');
-        duration.textContent = formatTime(audioPlayer.duration);
-
-        progressBar.addEventListener('mousedown', function() {
-            audioPlayer.muted = true;
-        });
-
-        progressBar.addEventListener('mouseup', function() {
-            audioPlayer.muted = false;
-        });
-        
-
-        audioPlayer.addEventListener('ended', function() {
-            // allowing the user to hit the end of the progress bar if dragging the button
-            if (audioPlayer.muted == true) {
-                
-            } else{
-                audioPlayer.currentTime = 0;
-            }
-            
-            playButton.style.display = 'block'; 
-            pauseButton.style.display = 'none'; 
-        });
-
-    };
-    // Function to format time from seconds to minutes:seconds
-    function formatTime(seconds) {
-        var minutes = Math.floor(seconds / 60);
-        seconds = Math.floor(seconds % 60) + 1;
-        return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-    }
-
-    audioPlayer.addEventListener('timeupdate', function() {
-        var audioPlayer = document.getElementById('audio-player');
-        var progressBar = document.getElementById('progress-bar');
-        var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-        progressBar.value = progress;
-
-        // Update the current time
-        var currentTime = document.getElementById('current-time');
-        currentTime.textContent = formatTime(audioPlayer.currentTime);
-
-        
-
-    });
-
-
-
-
-    $(function(){
-        $("#footer-index").load("homepage-footer.php"); 
-    });
-        
-    </script>
+    <script src="../js/profile.js"></script>
 </body>
 </html>
