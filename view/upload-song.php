@@ -123,6 +123,9 @@
             return false;
         }
         artiste.value = artiste ? artiste : "<?php echo $_SESSION['user']['ArtistName']?>";
+
+        uploadButton.value = "Uploading...";
+        uploadButton.disabled = true;
     
         return true;
     }
