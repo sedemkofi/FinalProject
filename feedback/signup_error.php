@@ -1,4 +1,4 @@
-<!-- Sign up errors being caught -->
+
 <?php
     if (isset($_GET['error']) && $_GET['error'] == 'email_in_use') {
         echo '<script>alert("This email is already in use. Please use a different email address.")</script>';

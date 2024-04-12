@@ -10,9 +10,6 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
         <title>Wavers - SignUp</title>
         
         <link rel="icon" href="../images/waveform.svg">
@@ -22,19 +19,12 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <link rel="stylesheet" href="../css/loading.css">
         <link rel="stylesheet" href="../css/signup.css">
-        <link rel="stylesheet" href="../js/signup.js">
     </head>
 <body>
     
     <div class="loader_bg">
         <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
-    
-    <!-- <video autoplay muted loop id="myVideo">
-        <source src="../images/centralcee.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video> -->
-    <!-- <div id="videoOverlay"></div> -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-none" style="position: fixed; background-color: rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); width: 100%;">
         <a class="navbar-brand" href="../index.php" style="color: white;">Wavers</a>
@@ -52,7 +42,6 @@
             </ul>
         </div>
     </nav>
-    <!-- Rest of your body code -->
     <div class="container d-flex justify-content-center align-items-center" style="height: 90vh; ">
         <div class="box p-5">
             <h1 class="text-center mb-4 sign-in-head">Sign up for Wavers</h1>
@@ -73,7 +62,7 @@
                     </div>
                     <div>
                         <label for="email" class="email-label">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address..." >
+                        <input type="text" id="email" name="email" placeholder="Enter your email address..." >
                     </div>
                     <div>
                         <label for="password">Password</label>
@@ -92,6 +81,25 @@
         </div>
     </div>
     <script>
+        $(document).ready(function(){
+            $("#sign-up-form").submit(function(event){
+                var email = $("#email").val();
+                var password = $("#password").val();
+                var confirmPassword = $("#confirm-password").val();
+                var domainPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                var domain = email.substring(email.lastIndexOf("@") +1);
+                if (email === "" || password === "" || confirmPassword === "") {
+                    event.preventDefault();
+                    alert("Please fill in all fields.");
+                } else if (password !== confirmPassword) {
+                    event.preventDefault();
+                    alert("Passwords do not match.");
+                } else if (!domainPattern.test(domain)) { // Test if domain matches the regular expression
+                    event.preventDefault();
+                    alert("Invalid email address.");
+                }
+            });
+        });
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader_bg').style.display = 'none';
