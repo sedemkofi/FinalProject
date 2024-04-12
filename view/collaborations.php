@@ -73,9 +73,8 @@ include '../functions/getCollabs.php'
         </div>
     </nav><br><br><br>
     <p style="text-align: center; font-size: 50px; font-weight: normal;">feedback from other artistes</p>
-    <br><br>
+    <br><br><br><br>
     <div id="collaborations-div">
-        <h5 id="heading">Feedback</h5>
         <?php displayCollaborations($collaborations);?>
     </div>
    
