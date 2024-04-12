@@ -14,15 +14,10 @@ $result = $stmt->get_result();
 if ($result) {    
     $musicFiles = $result->fetch_all(MYSQLI_ASSOC);
     return $musicFiles;
-
-} else {  
-    echo "<script>alert('Failed to fetch user files')</script>";
-}
+} 
 $stmt->close();
 $conn->close();
 
 echo $musicFiles;
-    
-  
 ?>
 

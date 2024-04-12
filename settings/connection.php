@@ -9,7 +9,7 @@ try {
     $conn = mysqli_connect($SERVER, $USERNAME, $PASSWORD, $DB_NAME);
 
 } catch (\Throwable $th) {
-    die();
     header("Location: ../index.php?error=connection-error");
+    die();
 }
 ?>
