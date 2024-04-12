@@ -1,3 +1,7 @@
+<?php
+    include 'feedback/general.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
