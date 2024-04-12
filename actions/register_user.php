@@ -1,6 +1,4 @@
 <?php
-
-
 include '../settings/connection.php';
 
 if (isset($_POST['Submit'])) {
