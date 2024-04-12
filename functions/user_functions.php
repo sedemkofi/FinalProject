@@ -18,7 +18,6 @@ function collabCount(){
     $stmt->execute();
     $result = $stmt->get_result();
     $count = $result->fetch_assoc();
-
     return $count['COUNT(*)'];
 }
 function collabingCount(){
@@ -32,7 +31,13 @@ function collabingCount(){
     return $count['COUNT(*)'];
 }
 function addCollabs(){
-    $count = collabCount() + collabingCount();
+    global $conn;
+    $stmt = $conn->prepare("SELECT UserID FROM collaborations WHERE UserID = ? UNION ALL SELECT CollaboratorID FROM collaborators WHERE CollaboratorID = ?");
+    $stmt->bind_param("ii", $_SESSION['user']['UserID'], $_SESSION['user']['UserID']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $count = $result->num_rows;
+
     return $count;
 }
 function displayBio(){

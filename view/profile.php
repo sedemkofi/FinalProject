@@ -69,7 +69,7 @@ include '../functions/showUploads.php'
             display: none;
         }
 
-        /* Existing styles from profile.css */
+       
         .header-picture {
             height: 350px;
             width: 100%;
@@ -207,6 +207,9 @@ include '../functions/showUploads.php'
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="homepage.php">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="collaborations.php">Collaborations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../login/signout.php">Sign Out</a>

@@ -53,7 +53,7 @@
                     </div>
                     <div class="form-group">
                         <label for="artiste">Artiste </label>
-                        <input type="text" id="artiste" name="artiste" placeholder="<?php echo $_SESSION['user']['ArtistName']?>">
+                        <input type="text" id="artiste" name="artiste" value="<?php echo $_SESSION['user']['ArtistName']?>">
                     </div>
                 </div>
             <div class="form-texts">
