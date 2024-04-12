@@ -15,7 +15,7 @@ include '../functions/getCollabs.php'
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Document</title>
+    <title>Wavers - Collaborations</title>
     <style>
         .home-back {
             background: url('../images/wavers2.jpg') no-repeat center center fixed; 
@@ -75,7 +75,7 @@ include '../functions/getCollabs.php'
     <p style="text-align: center; font-size: 50px; font-weight: normal;">feedback from other artistes</p>
     <br><br>
     <div id="collaborations-div">
-        <h5 id="heading">Collaborations</h5>
+        <h5 id="heading">Feedback</h5>
         <?php displayCollaborations($collaborations);?>
     </div>
    

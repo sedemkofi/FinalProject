@@ -229,7 +229,7 @@ include '../functions/showUploads.php'
         </h1>
         <p class="lead">Uploads: <?php echo uploadCount() ?> | Collaborations: <?php echo addCollabs()?></p>
         <p> <?php displayBio() ?></p>
-        <a class="btn btn-primary btn-sm" id="edit-button" href="edit-account.php">Edit Account</a>
+        <!-- <a class="btn btn-primary btn-sm" id="edit-button" href="edit-account.php">Edit Account</a> -->
         <a class="btn btn-primary btn-sm" href="upload-song.php" id="upload-button">Upload Music</a>
 
 

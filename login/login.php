@@ -11,6 +11,15 @@ include '../feedback/signup_error.php';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/loading.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            background-position: 100%;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="loader_bg">
