@@ -3,7 +3,7 @@ include '../settings/connection.php';
 
 function uploadCount(){
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM MusicFiles WHERE UserID = ?");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM musicfiles WHERE UserID = ?");
     $stmt->bind_param("i", $_SESSION['user']['UserID']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -13,7 +13,7 @@ function uploadCount(){
 
 function collabCount(){
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM Collaborations WHERE UserID = ?");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM collaborations WHERE UserID = ?");
     $stmt->bind_param("i", $_SESSION['user']['UserID']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -23,7 +23,7 @@ function collabCount(){
 }
 function collabingCount(){
     global $conn;
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM Collaborators WHERE CollaboratorID = ?");
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM collaborators WHERE CollaboratorID = ?");
     $stmt->bind_param("i", $_SESSION['user']['UserID']);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -37,7 +37,7 @@ function addCollabs(){
 }
 function displayBio(){
     global $conn;
-    $stmt = $conn->prepare("SELECT Bio FROM User WHERE UserID = ?");
+    $stmt = $conn->prepare("SELECT Bio FROM user WHERE UserID = ?");
     $stmt->bind_param("i", $_SESSION['user']['UserID']);
     $stmt->execute();
     $result = $stmt->get_result();

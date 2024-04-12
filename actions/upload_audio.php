@@ -18,7 +18,7 @@
             $uploadDate = date('Y-m-d H:i:s');
 
             // Upload the audio file and insert the details into the MusicFiles table
-            $stmt = $conn->prepare("INSERT INTO MusicFiles (UserID, Title, Artiste, FileName, FileType, UploadDate) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO musicfiles (UserID, Title, Artiste, FileName, FileType, UploadDate) VALUES (?, ?, ?, ?, ?, ?)");
             $stmt->bind_param("isssss", $currentUser, $title, $artiste, $pname, $fileType, $uploadDate);
             $stmt->execute();
 
