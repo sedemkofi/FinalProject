@@ -18,6 +18,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <link rel="stylesheet" href="../css/loading.css">
         <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" href="../js/signup.js">
     </head>
 <body>
     
@@ -87,26 +88,6 @@
         </div>
     </div>
     <script>
-        $(document).ready(function(){
-            $("#sign-up-form").submit(function(event){
-                var email = $("#email").val();
-                var password = $("#password").val();
-                var confirmPassword = $("#confirm-password").val();
-                var domainPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                var domain = email.substring(email.lastIndexOf("@") +1);
-                if (email === "" || password === "" || confirmPassword === "") {
-                    event.preventDefault();
-                    alert("Please fill in all fields.");
-                } else if (password !== confirmPassword) {
-                    event.preventDefault();
-                    alert("Passwords do not match.");
-                } else if (!domainPattern.test(domain)) { // Test if domain matches the regular expression
-                    event.preventDefault();
-                    alert("Invalid email address.");
-                }
-            });
-        });
-
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader_bg').style.display = 'none';
