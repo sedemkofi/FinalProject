@@ -12,78 +12,10 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/upload-song.css">
     <title>Wavers Upload</title>
     <style>
-        html, body {
-            
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .content {
-            width: 100%;
-            max-width: 500px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
-        }
-
-        .navbar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-        }
-        #audioFile{
-            display: none;
-        }
-        #imageFile{
-            display: none;
-        }
-        .upload-button {
-            font-size: 12px;
-            display: inline-block;
-            padding: 5px 10px;
-            background-color: #333333; /* Dark Grey */
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .upload-button:hover {
-            background-color: #4d4d4d; /* Lighter Grey */
-        }
-
-        .form-group label {
-            font-weight: bold;
-        }
-
-        .form-group input {
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 100%;
-        }
-
-        .form-group input[type="submit"] {
-            background-color: green;
-            color: white;
-            cursor: pointer;
-        }
-
-        .form-group input[type="submit"]:hover {
-            background-color: darkgreen;
-        }
-        .upload-message{
-            font-size: 12px;
-           
-        }
+        
     </style>
 </head>
 <body>
@@ -121,13 +53,14 @@
             <div class="form-group">
                 <label for="image" >Artwork</label><br>
                 <p class="upload-message">Upload an image</p>
-                <label for="imageFile" class="upload-button">Choose File</label>
                 <img id="image-preview" style="display: none;" /> 
+                <label for="imageFile" class="upload-button">Choose File</label>
                 <input type="file" id="imageFile" name="image" onchange="updateImageButtonLabel()" accept="image/*">
 
             </div>
             <div class="form-group">
-                <label for="audioFile">Audio</label><br>
+                <label>Audio</label><br>
+                <label for="audioFile" style="font-weight: normal;"><span style="color: firebrick; font-size: 15px;">*None Selected*</span></label>
                 <p class="upload-message">Upload an audio file (.mp3 or .wav)</p>
                 <label for="audioFile" class="upload-button">Choose file</label>
                 <input type="file" id="audioFile" name="audioFile" onchange="updateButtonLabel()" accept=".mp3,.wav">
@@ -148,7 +81,7 @@
         var audioFile = document.getElementById('audioFile');
         var label = document.querySelector('label[for="audioFile"]');
         var fileName = audioFile.value.split('\\').pop();
-        label.textContent = fileName ? `Audio: ${fileName}` : 'Upload Audio File';
+        label.textContent = fileName ? `${fileName}` : '';
     }
 
     function updateImageButtonLabel() {

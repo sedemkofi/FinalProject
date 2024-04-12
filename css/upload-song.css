@@ -1,0 +1,78 @@
+html, body {    
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#image-preview {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#audioFile{
+    display: none;
+}
+#imageFile{
+    display: none;
+}
+.upload-button {
+    font-size: 12px;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333333; /* Dark Grey */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #4d4d4d; /* Lighter Grey */
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-group input[type="submit"] {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+.upload-message{
+    font-size: 12px;
+}
