@@ -1,5 +1,6 @@
 <?php
     include '../settings/connection.php';
+   
     if (isset($_POST["Upload"])) {
 
         $title = $_POST['title'];
@@ -36,3 +37,28 @@
     }
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #uploading {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div id="uploading">
+    <img src="spinner.gif" alt="Uploading...">
+    <p>Uploading...</p>
+</div>
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function() {
+        document.getElementById('uploading').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
