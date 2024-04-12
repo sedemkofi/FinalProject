@@ -8,7 +8,6 @@ try {
     
     $conn = mysqli_connect($SERVER, $USERNAME, $PASSWORD, $DB_NAME);
 } catch (\Throwable $th) {
-    
     header("Location: ../index.php?error=connection-error");
 }
     
