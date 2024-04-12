@@ -1,7 +1,7 @@
 <?php
 include '../settings/core.php';
 include '../functions/user_functions.php';
-include '../functions/showUploads.php'
+include '../functions/showUploads.php';
 ?>
 
 <!DOCTYPE html>
