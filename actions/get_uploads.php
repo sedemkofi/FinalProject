@@ -13,7 +13,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 if ($result) {    
     $musicFiles = $result->fetch_all(MYSQLI_ASSOC);
-    echo "<script>alert('Fetched user files')</script>";
     return $musicFiles;
 
 } else {  
