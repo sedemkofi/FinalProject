@@ -2,7 +2,6 @@
 include '../feedback/signup_error.php';
 session_start();
 unset($_SESSION['user']);
-die();
 ?>
 
 <!DOCTYPE html>
