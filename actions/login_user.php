@@ -8,7 +8,7 @@ if(isset($_POST['Submit'])){
     $email =  $_POST['Email'];
     $password = $_POST['Password'];
 
-    $query =  "SELECT * FROM `User` WHERE `Email`='$email'";
+    $query =  "SELECT * FROM `user` WHERE `Email`='$email'";
     $result = mysqli_query($conn, $query);
     
     if($data = mysqli_fetch_assoc($result)){

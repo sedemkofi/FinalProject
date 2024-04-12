@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 $userID = $_SESSION['user']['UserID']; 
-$stmt = $conn->prepare("SELECT MusicFiles.*, User.ArtistName FROM MusicFiles JOIN User ON MusicFiles.UserID = User.UserID WHERE MusicFiles.UserID = ?");    
+$stmt = $conn->prepare("SELECT musicfiles.*, user.ArtistName FROM musicfiles JOIN user ON musicfiles.UserID = user.UserID WHERE musicfiles.UserID = ?");    
 $stmt->bind_param("i", $userID);
 $stmt->execute();
 $result = $stmt->get_result();

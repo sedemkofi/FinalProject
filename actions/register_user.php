@@ -21,7 +21,7 @@ if (isset($_POST['Submit'])) {
     // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    $query = "SELECT * FROM `User` WHERE `Email` = ?";
+    $query = "SELECT * FROM `user` WHERE `Email` = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -34,7 +34,7 @@ if (isset($_POST['Submit'])) {
         exit();
     }
 
-    $query = "INSERT INTO `User` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`, `HeaderPath`, `ArtistName`) VALUES (?, ?, ?, ?, '3', '../images/default-header.png', ?)";
+    $query = "INSERT INTO `user` (`FirstName`, `LastName`, `Email`, `Password`, `RoleID`, `HeaderPath`, `ArtistName`) VALUES (?, ?, ?, ?, '3', '../images/default-header.png', ?)";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("sssss", $firstname, $lastname, $email, $hashed_password, $artistname);
 
