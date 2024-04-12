@@ -2,6 +2,8 @@
 include '../settings/core.php';
 include '../functions/user_functions.php';
 include '../functions/showUploads.php';
+
+checkLogout();
 ?>
 <!DOCTYPE html>
 <html lang="en">

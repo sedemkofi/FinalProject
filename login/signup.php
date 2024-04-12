@@ -1,4 +1,8 @@
-
+<?php 
+    include '../feedback/signup_error.php';
+    include '../settings/core.php';
+    checkLogin();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -18,12 +22,11 @@
         <div class="loader"><img src="../images/loading.gif" alt="#" /><br><p>Loading</p></div>
     </div>
     
-    <video autoplay muted loop id="myVideo">
+    <!-- <video autoplay muted loop id="myVideo">
         <source src="../images/centralcee.mp4" type="video/mp4">
-        <!-- Display an image as fallback if the video doesn't load -->
         Your browser does not support HTML5 video.
-    </video>
-    <div id="videoOverlay"></div>
+    </video> -->
+    <!-- <div id="videoOverlay"></div> -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-none" style="position: fixed; background-color: rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); width: 100%;">
         <a class="navbar-brand" href="../index.php" style="color: white;">Wavers</a>
@@ -48,28 +51,30 @@
             <div class="line"></div>
             <form method="post" action="../actions/register_user.php" id="sign-up-form">
                 <div class="form-group">
-                    <label for="first-name" class="fname-label">First Name</label>
-                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name..." >
-                </div>
-                <div class="form-group">
-                    <label for="last-name" class="lname-label">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name..." >
-                </div>
-                <div class="form-group">
-                    <label for="artist-name" class="artist-name" style="margin-left: 5px">Artist Name</label>
-                    <input type="text" id="artist-name" name="artistname" placeholder="Enter your artist name..." >
-                </div>
-                <div class="form-group">
-                    <label for="email" class="email-label">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address..." >
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter a password" >
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" >
+                    <div>
+                        <label for="first-name" class="fname-label">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name..." >
+                    </div>
+                    <div>
+                        <label for="last-name" class="lname-label">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name..." >
+                    </div>
+                    <div>
+                        <label for="artist-name" class="artist-name" style="margin-left: 5px">Artist Name</label>
+                        <input type="text" id="artist-name" name="artistname" placeholder="Enter your artist name..." >
+                    </div>
+                    <div>
+                        <label for="email" class="email-label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address..." >
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter a password" >
+                    </div>
+                    <div>
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" >
+                    </div>
                 </div>
                 <p id="error-message"></p>
                 <div class="form-group text-center">
@@ -78,8 +83,6 @@
             </form>
         </div>
     </div>
-   
-    
     <script>
         $(document).ready(function(){
             $("#sign-up-form").submit(function(event){
@@ -108,7 +111,5 @@
         });
     </script>
 </body>
-<?php
-   include '../feedback/signup_error.php';
-?>  
+ 
 </html>
