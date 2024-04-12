@@ -58,7 +58,7 @@
                 </div>
             <div class="form-texts">
                 <div class="form-group" id="image-upload">
-                    <label for="image" >Artwork</label>
+                    <label for="image" >Artwork (optional)</label>
                     <p class="upload-message">Upload an image</p>
                     <img id="image-preview" style="display: none;" /> 
                     <label for="imageFile" class="upload-button">Choose File</label>

@@ -12,14 +12,17 @@
         $tname = $file["tmp_name"];
         $uploads_dir = '../user_uploads';
 
+        $fullPath = $uploads_dir.'/'.$pname; // path to the file
+
+
         // TODO handle images
         try {
             move_uploaded_file($tname, $uploads_dir.'/'.$pname);
             $uploadDate = date('Y-m-d H:i:s');
 
             // Upload the audio file and insert the details into the MusicFiles table
-            $stmt = $conn->prepare("INSERT INTO musicfiles (UserID, Title, Artiste, FileName, FileType, UploadDate) VALUES (?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("isssss", $currentUser, $title, $artiste, $pname, $fileType, $uploadDate);
+            $stmt = $conn->prepare("INSERT INTO musicfiles (UserID, Title, Artiste, FileName, FileType, UploadDate, FilePath) VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("issssss", $currentUser, $title, $artiste, $pname, $fileType, $uploadDate, $fullPath);
             $stmt->execute();
 
             header("Location: ../view/profile.php?message=file-upload-successful-$currentUser");
@@ -28,10 +31,8 @@
             header("Location: ../view/profile.php?error=upload-failed");
         }
         
-        
-        
     } else {
-        echo "Failed to upload file!";
+        header("Location: ../view/profile.php?error=upload-failed");
     }
 
 ?>

@@ -74,38 +74,37 @@ include '../functions/showUploads.php'
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
-    
         window.addEventListener('load', function() {
             setTimeout(function() {
                 document.querySelector('.loader_bg').style.display = 'none';
             }, 1500);  
         });
 
-    var audioPlayer = document.getElementById('audio-player');
-    var playButton = document.getElementById('playButton');
-    var pauseButton = document.getElementById('pauseButton');
-    var volumeControl = document.getElementById('volumeControl');
-    var progressBar = document.getElementById('progressBar');
+        var audioPlayer = document.getElementById('audio-player');
+        var playButton = document.getElementById('playButton');
+        var pauseButton = document.getElementById('pauseButton');
+        var volumeControl = document.getElementById('volumeControl');
+        var progressBar = document.getElementById('progressBar');
 
 
-    playButton.addEventListener('click', function() {
-        audioPlayer.play();
-        playButton.style.display = 'none';
-        pauseButton.style.display = 'block';
-    });
+        playButton.addEventListener('click', function() {
+            audioPlayer.play();
+            playButton.style.display = 'none';
+            pauseButton.style.display = 'block';
+        });
 
-    pauseButton.addEventListener('click', function() {
-        audioPlayer.pause();
-        playButton.style.display = 'block';
-        pauseButton.style.display = 'none';
-    });
+        pauseButton.addEventListener('click', function() {
+            audioPlayer.pause();
+            playButton.style.display = 'block';
+            pauseButton.style.display = 'none';
+        });
 
-    volumeControl.addEventListener('change', function() {
-        audioPlayer.volume = volumeControl.value;
-    });
+        volumeControl.addEventListener('change', function() {
+            audioPlayer.volume = volumeControl.value;
+        });
 
 
-    window.onload = function() {
+        window.onload = function() {
 
         var audioPlayer = document.getElementById('audio-player');
         var progressBar = document.getElementById('progress-bar');
@@ -144,30 +143,30 @@ include '../functions/showUploads.php'
             pauseButton.style.display = 'none'; 
         });
 
-    };
-    // Function to format time from seconds to minutes:seconds
-    function formatTime(seconds) {
-        var minutes = Math.floor(seconds / 60);
-        seconds = Math.floor(seconds % 60) + 1;
-        return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-    }
+        };
+        // Function to format time from seconds to minutes:seconds
+        function formatTime(seconds) {
+            var minutes = Math.floor(seconds / 60);
+            seconds = Math.floor(seconds % 60) + 1;
+            return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        }
 
-    audioPlayer.addEventListener('timeupdate', function() {
-        var audioPlayer = document.getElementById('audio-player');
-        var progressBar = document.getElementById('progress-bar');
-        var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-        progressBar.value = progress;
+        audioPlayer.addEventListener('timeupdate', function() {
+            var audioPlayer = document.getElementById('audio-player');
+            var progressBar = document.getElementById('progress-bar');
+            var progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.value = progress;
 
-        // Update the current time
-        var currentTime = document.getElementById('current-time');
-        currentTime.textContent = formatTime(audioPlayer.currentTime);
+            // Update the current time
+            var currentTime = document.getElementById('current-time');
+            currentTime.textContent = formatTime(audioPlayer.currentTime);
 
-        
+            
 
-    });
-    $(function(){
-        $("#footer-index").load("homepage-footer.php"); 
-    });
+        });
+        $(function(){
+            $("#footer-index").load("homepage-footer.php"); 
+        });
     </script>
 </body>
 </html>

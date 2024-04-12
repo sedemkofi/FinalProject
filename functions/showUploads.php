@@ -9,7 +9,7 @@ function displayUploads($musicFiles) {
         foreach ($musicFiles as $musicFile) {
             echo "<div class='grid-item'>";
             echo "<audio type='audio' id='audio-player'>";
-            echo "<source src='" . $musicFile['FileName'] . "' type='audio/" . $musicFile['FileType'] . "'>";
+            echo "<source src='" . $musicFile['FilePath'] . "' type='" . $musicFile['FileType'] . "'>";
             echo "Your browser does not support the audio element.";
             echo "</audio>";
             echo "<div id='audio-container'>";
@@ -31,8 +31,12 @@ function displayUploads($musicFiles) {
             
         }
     } else {
-        echo "<p>No uploads yet</p>";
+        echo "<p style='font-size: 10px'>No uploads yet</p>";
     }
+}
+// TODO show top 3 recent songs uploaded
+function displayRecentUploads(){
+
 }
 
 ?>

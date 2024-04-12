@@ -55,6 +55,7 @@ CREATE TABLE `musicfiles` (
   `Title` varchar(100) DEFAULT NULL,
   `Artiste` varchar(100) DEFAULT NULL,
   `FileName` varchar(100) DEFAULT NULL,
+  `FilePath` varchar(200) DEFAULT NULL,
   `FileType` varchar(10) DEFAULT NULL,
   `UploadDate` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
