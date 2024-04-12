@@ -38,42 +38,48 @@
             </ul>
         </div>
     </nav>
+
     <div class="content">
-        <h1>Add Your Music</h1>
-        <p>Upload your audio and start collborating with others!</p>
-        <form action="../actions/upload_audio.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title" >
+        
+        <div class="form-container">
+        <h3>Add Your Music</h3>
+        <p>Upload your audio and start collaborating with others!</p>
+        <br><br>
+            <form action="../actions/upload_audio.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+                <div class="form-texts">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" >
+                    </div>
+                    <div class="form-group">
+                        <label for="artiste">Artiste </label>
+                        <input type="text" id="artiste" name="artiste" placeholder="<?php echo $_SESSION['user']['ArtistName']?>">
+                    </div>
+                </div>
+            <div class="form-texts">
+                <div class="form-group" id="image-upload">
+                    <label for="image" >Artwork</label>
+                    <p class="upload-message">Upload an image</p>
+                    <img id="image-preview" style="display: none;" /> 
+                    <label for="imageFile" class="upload-button">Choose File</label>
+                    <input type="file" id="imageFile" name="image" onchange="updateImageButtonLabel()" accept="image/*">
+                </div>
+                <div class="form-group" id="audio-upload">
+                    <label>Audio</label><br>
+                    <p class="upload-message">Upload an audio file (.mp3 or .wav)</p>
+                    <label for="audioFile" class="upload-button">Choose file</label>
+                    <input type="file" id="audioFile" name="audioFile" onchange="updateButtonLabel()" accept=".mp3,.wav">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="artiste">Artiste </label>
-                <input type="text" id="artiste" name="artiste" placeholder="<?php echo $_SESSION['user']['ArtistName']?>">
-            </div>
-            <div class="form-group">
-                <label for="image" >Artwork</label><br>
-                <p class="upload-message">Upload an image</p>
-                <img id="image-preview" style="display: none;" /> 
-                <label for="imageFile" class="upload-button">Choose File</label>
-                <input type="file" id="imageFile" name="image" onchange="updateImageButtonLabel()" accept="image/*">
-
-            </div>
-            <div class="form-group">
-                <label>Audio</label><br>
-                <label for="audioFile" style="font-weight: normal;"><span style="color: firebrick; font-size: 15px;">*None Selected*</span></label>
-                <p class="upload-message">Upload an audio file (.mp3 or .wav)</p>
-                <label for="audioFile" class="upload-button">Choose file</label>
-                <input type="file" id="audioFile" name="audioFile" onchange="updateButtonLabel()" accept=".mp3,.wav">
-
-            </div>
-            <div class="form-group">
-                <input type="text" id="userID" name="ID" value="<?php echo $_SESSION['user']['UserID']?>" hidden>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Upload" name="Upload">
-            </div>
-        </form>
+                
+                <div class="form-group">
+                    <input type="text" id="userID" name="ID" value="<?php echo $_SESSION['user']['UserID']?>" hidden>
+                </div>
+                <div class="form-upload">
+                    <input type="submit" id="form-upload-button" value="Upload" name="Upload">
+                </div>
+            </form>
+        </div>
     </div>
 <script>
     var currentUser = document.getElementById('userID');
