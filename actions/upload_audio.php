@@ -26,7 +26,7 @@
                 $stmt->bind_param("issssss", $currentUser, $title, $artiste, $pname, $fileType, $uploadDate, $fullPath);
                 $stmt->execute();
     
-                header("Location: ../view/profile.php?message=file-upload-successful-$currentUser");
+                header("Location: ../view/profile.php?message=file-upload-successful");
                 $stmt->close();
             } else {
                 header("Location: ../view/profile.php?error=upload-failed");

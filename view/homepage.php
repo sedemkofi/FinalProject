@@ -1,6 +1,7 @@
 <?php
 include '../settings/core.php';
 include '../functions/showUploads.php';
+include '../feedback/general.php';
 
 checkLogout();
 ?>

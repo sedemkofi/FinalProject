@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ii", $collaborationId, $uploaderUserId);
     $stmt->execute();
 
-    header("Location: ../view/profile.php?message=collaboration-successful");
+    header("Location: ../view/homepage.php?message=collaboration-successful");
 } else {
-    header("Location: ../view/profile.php?error=invalid-request");
+    header("Location: ../view/homepage.php?error=invalid-request");
 }
 ?>

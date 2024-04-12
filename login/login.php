@@ -1,5 +1,7 @@
 <?php
 include '../feedback/signup_error.php';
+session_start();
+unset($_SESSION['user']);
 ?>
 
 <!DOCTYPE html>

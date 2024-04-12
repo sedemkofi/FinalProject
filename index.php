@@ -13,10 +13,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 <body>
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /><br><p>Loading</p></div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.php">Wavers</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,10 +59,9 @@
                     Forge new connections, exchange ideas, and embark on exciting musical journeys together!
                 </div>
                 <div class="col">
-                    <span class="head">Follow your favourates</span><br><br>
-                    Stay updated and inspired by following your favorite musicians and bands on our platform! 
-                    By following users whose music resonates with you, you'll receive notifications about their latest uploads, collaborations, and activities. 
-                    Keep track of their musical journey, discover new releases, and show your support by engaging with their content.
+                    <span class="head">Explore Music from Around the World</span><br><br>
+                    Discover a world of music beyond borders! Our platform brings together musicians and artists from diverse cultures and backgrounds, offering you a unique opportunity to explore and appreciate music from all corners of the globe.
+                    Immerse yourself in the rich tapestry of sounds, rhythms, and melodies from different countries and regions. Join our global community and embark on a journey of musical discovery like never before.
                 </div>
             </div>
             <div class="get-started-div">
@@ -84,6 +87,11 @@
         }); 
         $(function(){
             $("#footer-index").load("view/index-footer.php"); 
+        });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loader_bg').style.display = 'none';
+            }, 1500);  
         });
     </script>
 </body>
